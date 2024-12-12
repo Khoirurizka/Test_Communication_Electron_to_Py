@@ -1,0 +1,61 @@
+{
+  "name": "visual_prog_flowchart_tm_v1.4",
+  "version": "0.1.0",
+  "description": "Base station for controling multiple robot. It's utilize the visual programming and ROS or ROS2. Make it, so usefull even for unskilled people. for using this aplication, the it should connected to pddl and solver, while it will give result as graph that related to ROS function.",
+  "private": true,
+  "author": "khoirurizka",
+  "license": "ISC",
+  "keywords": [
+    "robot"
+  ],
+  "dependencies": {
+    "@electron/remote": "^2.1.2",
+    "@testing-library/jest-dom": "^5.17.0",
+    "@testing-library/react": "^13.4.0",
+    "@testing-library/user-event": "^13.5.0",
+    "bootstrap": "^5.3.3",
+    "concurrently": "^9.1.0",
+    "flexlayout-react": "^0.8.1",
+    "gojs": "^3.0.13",
+    "gojs-react": "^1.1.2",
+    "react": "^18.3.1",
+    "react-bootstrap": "^2.10.5",
+    "react-chatbot-kit": "^2.2.2",
+    "react-dom": "^18.3.1",
+    "react-scripts": "5.0.1",
+    "web-vitals": "^2.1.4"
+  },
+  "main": "public/main.js",
+  "homepage": "./",
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "electron:serve": "concurrently -k \"BROWSER=none npm start\" \"npm run electron:start\" ",
+    "electron:build": "",
+    "electron:start": "wait-on http://localhost:3000 && electron ."
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
+    "electron": "^33.2.1"
+  }
+}
